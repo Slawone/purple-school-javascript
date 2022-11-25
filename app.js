@@ -1,14 +1,14 @@
-// Упражнение - Проверка робота
+// Упражнение - Проверка прав
 
-const message = prompt('Сколько будет 7 + или - 15?');
+let balance = 1300;
+let bonusBalance = 100;
+let isBanned = false;
+let isExist = false;
+let isSelling = true;
 
-switch (true) {  
-  case message === 'Я не робот':
-  case Number(message) === -8:
-  case Number(message) === 22:
-    console.log('Успех');
-    break;
-  default:
-    console.log('Вы робот!');
-}
-  
+const canBuy = (balance > 1000 || bonusBalance > 100)
+  && !isBanned
+  && !isExist
+  && isSelling;
+
+console.log(`Может купить: ${canBuy ? 'Да' : 'Нет'}`);
