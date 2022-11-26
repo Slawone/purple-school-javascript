@@ -1,14 +1,12 @@
-// Упражнение - Проверка прав
+// Упражнение - Упрощение функции
 
-let balance = 1300;
-let bonusBalance = 100;
-let isBanned = false;
-let isExist = false;
-let isSelling = true;
+// function toPower(num, power) {
+//   const res = num ** power;
+//   return res;
+// }
 
-const canBuy = (balance > 1000 || bonusBalance > 100)
-  && !isBanned
-  && !isExist
-  && isSelling;
+// console.log(toPower(2, 3));
 
-console.log(`Может купить: ${canBuy ? 'Да' : 'Нет'}`);
+const toPowerArray = (num, power) => num ** power;
+
+console.log(toPowerArray(2, 3));
