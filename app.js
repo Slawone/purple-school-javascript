@@ -1,8 +1,12 @@
-const tasks = ['Задача 1'];
+const tasks = ['Задача 1', 'Задача 2', 'Задача 3', 'Задача 4', 'Задача 5'];
 
 function Add(task) {
   tasks.push(task);
 }
+
+Add('Задача 6');
+
+console.log(tasks);
 
 function Remove(task) {
   const index = tasks.indexOf(task);
@@ -12,27 +16,36 @@ function Remove(task) {
   tasks.splice(index, 1);
 }
 
-function Proritize(task) {
+Remove('Задача 10');
+console.log(tasks);
+
+function Prioritize(task) {
   const index = tasks.indexOf(task);
   if (index === -1) {
     return;
   }
-  const oldTask = tasks[index];
+  const oldEl = tasks[index];
+
   tasks.splice(index, 1);
-  tasks.unshift(oldTask);
+
+  tasks.unshift(oldEl);
 }
-Add('Задача 2');
-Add('Задача 3');
 
+Prioritize('Задача 10');
 console.log(tasks);
 
-Remove('Задача 2');
+/*
+Сделать функции:
+Добавление задачи в конец
+Удаление задачи по названию
+Перенос задачи в начало списка по названию
+! Всегда меняем исходный массив
+*/
 
-console.log(tasks);
 
-Proritize('Задача 3');
 
-console.log(tasks);
+
+
 
 // const tasks = ['Задача 1', 'Задача 2', 'Задача 3', 'Задача 4', 'Задача 5'];
 
