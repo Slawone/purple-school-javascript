@@ -1,9 +1,13 @@
-// Отобразить положительные изменения цен
+// Найти среднее значение последовательности чисел с помощью reduce
 
-const prices = [[100, 200], [120, 100], [200, 350]];
+const arr = [2, 4, 4, 10];
 
-const result = prices
-  .map(product => product[1] - product[0])
-  .filter(price => price > 0);
+const avg = arr.reduce((acc, element, i) => {
+  if (i != arr.length - 1) {
+    return acc + element;
+  } else {
+    return (acc + element) / arr.length;
+  }
+}, 0);
 
-console.log(result);
+console.log(avg);
