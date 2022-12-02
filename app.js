@@ -1,13 +1,20 @@
-// Найти среднее значение последовательности чисел с помощью reduce
+// Функция возвращает true, если элемент есть и false, если нет.
 
-const arr = [2, 4, 4, 10];
+const arr = [2, 4, 4, 10, 10];
 
-const avg = arr.reduce((acc, element, i) => {
-  if (i != arr.length - 1) {
-    return acc + element;
-  } else {
-    return (acc + element) / arr.length;
-  }
-}, 0);
+// function some(arr, el) {
+//   arr.filter((item) => {
+//     item === el;
+//   })
+// }
 
-console.log(avg);
+// console.log(some(arr, 2));
+
+function some (array, element) {
+  const res = array.find(el => el === element);
+  return res == undefined ? false : true;
+}
+
+console.log(some(arr, 10));
+
+console.log(arr.some(el => el === 0));
