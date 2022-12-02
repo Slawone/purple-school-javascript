@@ -1,11 +1,9 @@
-// function power(pow) {
-//   return function(num) {
-//     return num ** pow;
-//   }
-// }
+// Отобразить положительные изменения цен
 
-// console.log(power(4)(5));
+const prices = [[100, 200], [120, 100], [200, 350]];
 
-const power = pow => num => num ** pow;
+const result = prices
+  .map(product => product[1] - product[0])
+  .filter(price => price > 0);
 
-console.log(power(4)(5));
+console.log(result);
